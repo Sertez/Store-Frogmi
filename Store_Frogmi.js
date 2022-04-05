@@ -1,14 +1,14 @@
 
 var incidents = [
     { report: 'el pasillo esta suico', solution:'hay que barrerlo', open_date: '1/13/2022', status: 'open', solved_date:''},
-    { report: '', solution:'', open_date: '2/1/2022', status: 'open', solved_date:''},
-    { report: '', solution:'', open_date: '2/2/2022', status: 'solved', solved_date:'2/20/2022'},
-    { report: '', solution:'', open_date: '2/12/2022', status: 'solved', solved_date:'3/23/2022'},
-    { report: '', solution:'', open_date: '2/16/2022', status: 'solved', solved_date:'2/28/2022'},
-    { report: '', solution:'', open_date: '3/10/2022', status: 'solved', solved_date:'3/30/2022'},
-    { report: '', solution:'', open_date: '3/20/2022', status: 'open', solved_date:''},
-    { report: '', solution:'', open_date: '3/26/2022', status: 'open', solved_date:''},
-    { report: '', solution:'', open_date: '4/1/2022', status: 'open', solved_date:''},
+    { report: 'no hay azucar', solution:'comprar azucar', open_date: '2/1/2022', status: 'open', solved_date:''},
+    { report: 'perros entraron a la tienda', solution:'sacar a los perros', open_date: '2/2/2022', status: 'solved', solved_date:'2/20/2022'},
+    { report: 'no hay luz', solution:'pagar el recibo de la luz', open_date: '2/12/2022', status: 'solved', solved_date:'3/23/2022'},
+    { report: 'fuga de agua en un baño', solution:'llamar al conserje', open_date: '2/16/2022', status: 'solved', solved_date:'2/28/2022'},
+    { report: 'pasillo 3 mojado', solution:'trapear el pasillo 3', open_date: '3/10/2022', status: 'solved', solved_date:'3/30/2022'},
+    { report: 'bicicleta de domicilios averiada', solution:'arreglar la bicileta', open_date: '3/20/2022', status: 'open', solved_date:''},
+    { report: 'productos vencidos', solution:'reemplazar productos', open_date: '3/26/2022', status: 'open', solved_date:''},
+    { report: 'termitas en la tienda', solution:'buscar un exterminador', open_date: '4/1/2022', status: 'open', solved_date:''},
 ];
 
 const incident_status = (start_date, end_date) => {
@@ -34,6 +34,7 @@ const incident_status = (start_date, end_date) => {
             }
             
         })
+    console.log('Reporte de incidentes')
     console.log('Casos resueltos: ' + solved_cases)
     console.log('Casos abiertos: ' + open_cases)
     console.log('Promedio de tiempo de solucion en dias: ' + Math.floor((average_solution_time/solved_cases)/(1000 * 3600 * 24)))
